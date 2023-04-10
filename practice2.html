@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Font Control</title>
+	<style>
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		
+		p {
+			font-size: 20px;
+			padding: 10px;
+			border: 2px solid black;
+			border-radius: 5px;
+			margin-bottom: 20px;
+			color: black; /* Default font color */
+		}
+		
+		input[type="text"] {
+			width: 200px;
+			height: 25px;
+			padding: 5px;
+			border-radius: 5px;
+			margin-bottom: 10px;
+			font-size: 16px;
+		}
+		
+		button {
+			font-size: 16px;
+			padding: 5px;
+			border-radius: 5px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p id="my-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ullamcorper leo. </p>
+		<input type="text" id="back-color-input" placeholder="Background color (ex. red, green, blue)">
+		<input type="text" id="border-color-input" placeholder="Border color (ex. red, green, blue)">
+		<input type="text" id="border-width-input" placeholder="Border width (ex. 2)">
+		<button onclick="apply_styles()">Apply</button>
+	</div>
+
+	<script>
+		function apply_styles() {
+			const backColor = document.getElementById("back-color-input").value;
+			const borderColor = document.getElementById("border-color-input").value;
+			const borderWidth = document.getElementById("border-width-input").value;
+
+			const paragraph = document.getElementById("my-paragraph");
+			paragraph.style.background = backColor;
+			paragraph.style.borderColor = borderColor;
+			paragraph.style.borderWidth = borderWidth + "px";
+		}
+	</script>
+</body>
+</html>
